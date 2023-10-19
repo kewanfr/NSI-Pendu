@@ -7,6 +7,7 @@ class Pendu:
 
     def affichage_dessin(self):
         etapes = {
+            0: "",
             1: "\n" * 8 + "------------------",
             2: "  |    \n" * 8 + "------------------",
             3: "  _______     \n" + "  |\n" * 8 + "------------------",
@@ -17,6 +18,8 @@ class Pendu:
             8: "  _______     \n" + "  |/    |\n" + "  |     |\n"+ "  |     O    \n"+ "  |    /|\    \n" +  "  |     |\n" + "  |\n" * 3  + "------------------",
             9: "  _______     \n" + "  |/    |\n" + "  |     |\n"+ "  |     O    \n"+ "  |    /|\    \n" +  "  |     |\n" + "  |    / \    \n"  + "  |\n" * 2  + "------------------"
         }
+        if 0 <= self.compteur_erreurs <= 9:
+            print(etapes[self.compteur_erreurs])
 
     def affiche2(self):
         pass
@@ -32,4 +35,6 @@ class Pendu:
         
 jeu = Pendu()
 # jeu.partie()
-jeu.affichage_dessin()
+# jeu.affichage_dessin()
+# jeu.compteur_erreurs += 9
+# jeu.affichage_dessin()
